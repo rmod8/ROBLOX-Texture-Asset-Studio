@@ -1473,7 +1473,7 @@ namespace ROBLOXTextureAssetStudio
             this.Enabled = false;
             if (isOutputPathValid(true))
             {
-                studsRef = new Image[] { this.pictureboxStudsOutlets.Image, this.pictureboxStudsInlets.Image, this.pictureboxStudsUniversal.Image, this.pictureboxStudsUniversal.Image, this.pictureboxStudsGlue.Image };
+                studsRef = new Image[] { this.pictureboxStudsOutlets.Image, this.pictureboxStudsInlets.Image, this.pictureboxStudsUniversal.Image, this.pictureboxStudsSmooth.Image, this.pictureboxStudsGlue.Image };
                 for (int i = 0; i < 5; i++)
                 {
                     Image outputImage = studsRef[i];
@@ -1579,6 +1579,73 @@ namespace ROBLOXTextureAssetStudio
         {
             Properties.Settings.Default.ExportCategory = checkVMTCategory.Checked;
             Properties.Settings.Default.Save();
+        }
+
+        private void buttonStudsExportSelectedPNG_Click(object sender, EventArgs e)
+        {
+            this.Enabled = false;
+            if (isOutputPathValid(true))
+            {
+                studsRef = new Image[] { this.pictureboxStudsOutlets.Image, this.pictureboxStudsInlets.Image, this.pictureboxStudsUniversal.Image, this.pictureboxStudsSmooth.Image, this.pictureboxStudsGlue.Image };
+                studsChecked = new bool[] { this.checkStudsOutlets.Checked, this.checkStudsInlets.Checked, this.checkStudsUniversal.Checked, this.checkStudsSmooth.Checked, this.checkStudsGlue.Checked };
+                for (int i = 0; i < 5; i++)
+                {
+                    if (!studsChecked[i])
+                    {
+                        continue;
+                    }
+                    Image outputImage = studsRef[i];
+                    string outputname = (studsCanvases[i] + "_" + pictureboxStudsColour.BackColor.R + "_" + pictureboxStudsColour.BackColor.G + "_" + pictureboxStudsColour.BackColor.B);
+
+
+                    if (numericMaterialTransaprency.Value != 100)
+                    {
+                        outputname += "-trans_" + numericMaterialTransaprency.Value;
+                        outputImage = ChangeTransparency(outputImage, numericMaterialTransaprency.Value);
+                    }
+
+                    outputImage.Save(textboxExport.Text + "\\" + outputname + ".png", ImageFormat.Png);
+                }
+                soundTada.Play();
+            }
+            this.Enabled = true;
+        }
+
+        private void buttonStudsExportSelectedVMT_Click(object sender, EventArgs e)
+        {
+            this.Enabled = false;
+            if (isOutputPathValid(true))
+            {
+                studsRef = new Image[] { this.pictureboxStudsOutlets.Image, this.pictureboxStudsInlets.Image, this.pictureboxStudsUniversal.Image, this.pictureboxStudsSmooth.Image, this.pictureboxStudsGlue.Image };
+                studsChecked = new bool[] { this.checkStudsOutlets.Checked, this.checkStudsInlets.Checked, this.checkStudsUniversal.Checked, this.checkStudsSmooth.Checked, this.checkStudsGlue.Checked };
+                for (int i = 0; i < 5; i++)
+                {
+                    if (!studsChecked[i])
+                    {
+                        continue;
+                    }
+                    Image outputImage = studsRef[i];
+                    string outputname = (studsCanvases[i] + "_" + pictureboxStudsColour.BackColor.R + "_" + pictureboxStudsColour.BackColor.G + "_" + pictureboxStudsColour.BackColor.B);
+
+
+                    if (numericMaterialTransaprency.Value != 100)
+                    {
+                        outputname += "-trans_" + numericMaterialTransaprency.Value;
+                        outputImage = ChangeTransparency(outputImage, numericMaterialTransaprency.Value);
+                    }
+
+                    //Now we need to build the vmt
+
+                    Image dummyimage = (Image)outputImage.Clone();
+                    if (!ExportVMT(outputname, "studs", dummyimage))
+                    {
+                        MessageBox.Show("VMT Failed to Save", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    dummyimage.Dispose();
+                }
+                soundTada.Play();
+            }
+            this.Enabled = true;
         }
     }
 

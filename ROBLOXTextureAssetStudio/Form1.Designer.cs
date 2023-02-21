@@ -784,6 +784,7 @@
             this.buttonStudsExportSelectedVMT.TabIndex = 42;
             this.buttonStudsExportSelectedVMT.Text = "Export Selected only VMT";
             this.buttonStudsExportSelectedVMT.UseVisualStyleBackColor = true;
+            this.buttonStudsExportSelectedVMT.Click += new System.EventHandler(this.buttonStudsExportSelectedVMT_Click);
             // 
             // buttonStudsExportSelectedPNG
             // 
@@ -794,6 +795,7 @@
             this.buttonStudsExportSelectedPNG.TabIndex = 41;
             this.buttonStudsExportSelectedPNG.Text = "Export Selected only PNG";
             this.buttonStudsExportSelectedPNG.UseVisualStyleBackColor = true;
+            this.buttonStudsExportSelectedPNG.Click += new System.EventHandler(this.buttonStudsExportSelectedPNG_Click);
             // 
             // buttonStudsExportSelected
             // 
