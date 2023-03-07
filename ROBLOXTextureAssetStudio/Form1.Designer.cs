@@ -102,7 +102,7 @@
             this.buttonStudsExportVMT = new System.Windows.Forms.Button();
             this.buttonStudsExportPNG = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericStudsTransparency = new System.Windows.Forms.NumericUpDown();
             this.buttonStudsColourSelect = new System.Windows.Forms.Button();
             this.pictureboxStudsColour = new System.Windows.Forms.PictureBox();
             this.buttonStudsExportAll = new System.Windows.Forms.Button();
@@ -129,7 +129,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxStudsInlets)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxStudsOutlets)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericStudsIntensity)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericStudsTransparency)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxStudsColour)).BeginInit();
             this.SuspendLayout();
             // 
@@ -764,7 +764,7 @@
             this.groupBox4.Controls.Add(this.buttonStudsExportVMT);
             this.groupBox4.Controls.Add(this.buttonStudsExportPNG);
             this.groupBox4.Controls.Add(this.label14);
-            this.groupBox4.Controls.Add(this.numericUpDown2);
+            this.groupBox4.Controls.Add(this.numericStudsTransparency);
             this.groupBox4.Controls.Add(this.buttonStudsColourSelect);
             this.groupBox4.Controls.Add(this.pictureboxStudsColour);
             this.groupBox4.Controls.Add(this.buttonStudsExportAll);
@@ -1055,18 +1055,18 @@
             this.label14.TabIndex = 12;
             this.label14.Text = "Stud Transparency:";
             // 
-            // numericUpDown2
+            // numericStudsTransparency
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(6, 279);
-            this.numericUpDown2.Minimum = new decimal(new int[] {
+            this.numericStudsTransparency.Location = new System.Drawing.Point(6, 279);
+            this.numericStudsTransparency.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(166, 20);
-            this.numericUpDown2.TabIndex = 11;
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.numericStudsTransparency.Name = "numericStudsTransparency";
+            this.numericStudsTransparency.Size = new System.Drawing.Size(166, 20);
+            this.numericStudsTransparency.TabIndex = 11;
+            this.numericStudsTransparency.Value = new decimal(new int[] {
             100,
             0,
             0,
@@ -1148,7 +1148,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxStudsInlets)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxStudsOutlets)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericStudsIntensity)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericStudsTransparency)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxStudsColour)).EndInit();
             this.ResumeLayout(false);
 
@@ -1209,7 +1209,7 @@
         private System.Windows.Forms.Button buttonStudsExportVMT;
         private System.Windows.Forms.Button buttonStudsExportPNG;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericStudsTransparency;
         private System.Windows.Forms.Button buttonStudsColourSelect;
         private System.Windows.Forms.PictureBox pictureboxStudsColour;
         private System.Windows.Forms.Button buttonStudsExportAll;

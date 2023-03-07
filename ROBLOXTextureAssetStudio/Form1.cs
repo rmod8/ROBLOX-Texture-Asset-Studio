@@ -1445,10 +1445,10 @@ namespace ROBLOXTextureAssetStudio
                     string outputname = (studsCanvases[i] + "_" + pictureboxMaterialColour.BackColor.R + "_" + pictureboxMaterialColour.BackColor.G + "_" + pictureboxMaterialColour.BackColor.B);
 
 
-                    if (numericMaterialTransaprency.Value != 100)
+                    if (numericStudsTransparency.Value != 100)
                     {
-                        outputname += "-trans_" + numericMaterialTransaprency.Value;
-                        outputImage = ChangeTransparency(outputImage, numericMaterialTransaprency.Value);
+                        outputname += "-trans_" + numericStudsTransparency.Value;
+                        outputImage = ChangeTransparency(outputImage, numericStudsTransparency.Value);
                     }
 
                     //Now we need to build the vmt
@@ -1480,10 +1480,10 @@ namespace ROBLOXTextureAssetStudio
                     string outputname = (studsCanvases[i] + "_" + pictureboxStudsColour.BackColor.R + "_" + pictureboxStudsColour.BackColor.G + "_" + pictureboxStudsColour.BackColor.B);
 
 
-                    if (numericMaterialTransaprency.Value != 100)
+                    if (numericStudsTransparency.Value != 100)
                     {
-                        outputname += "-trans_" + numericMaterialTransaprency.Value;
-                        outputImage = ChangeTransparency(outputImage, numericMaterialTransaprency.Value);
+                        outputname += "-trans_" + numericStudsTransparency.Value;
+                        outputImage = ChangeTransparency(outputImage, numericStudsTransparency.Value);
                     }
 
                     //Now we need to build the vmt
@@ -1507,10 +1507,10 @@ namespace ROBLOXTextureAssetStudio
                     string outputname = (studsCanvases[i] + "_" + pictureboxStudsColour.BackColor.R + "_" + pictureboxStudsColour.BackColor.G + "_" + pictureboxStudsColour.BackColor.B);
 
 
-                    if (numericMaterialTransaprency.Value != 100)
+                    if (numericStudsTransparency.Value != 100)
                     {
-                        outputname += "-trans_" + numericMaterialTransaprency.Value;
-                        outputImage = ChangeTransparency(outputImage, numericMaterialTransaprency.Value);
+                        outputname += "-trans_" + numericStudsTransparency.Value;
+                        outputImage = ChangeTransparency(outputImage, numericStudsTransparency.Value);
                     }
 
                     Image dummyimage = (Image)outputImage.Clone();
@@ -1542,10 +1542,10 @@ namespace ROBLOXTextureAssetStudio
                     string outputname = (studsCanvases[i] + "_" + pictureboxStudsColour.BackColor.R + "_" + pictureboxStudsColour.BackColor.G + "_" + pictureboxStudsColour.BackColor.B);
 
 
-                    if (numericMaterialTransaprency.Value != 100)
+                    if (numericStudsTransparency.Value != 100)
                     {
-                        outputname += "-trans_" + numericMaterialTransaprency.Value;
-                        outputImage = ChangeTransparency(outputImage, numericMaterialTransaprency.Value);
+                        outputname += "-trans_" + numericStudsTransparency.Value;
+                        outputImage = ChangeTransparency(outputImage, numericStudsTransparency.Value);
                     }
 
                     //Now we need to build the vmt
@@ -1598,10 +1598,10 @@ namespace ROBLOXTextureAssetStudio
                     string outputname = (studsCanvases[i] + "_" + pictureboxStudsColour.BackColor.R + "_" + pictureboxStudsColour.BackColor.G + "_" + pictureboxStudsColour.BackColor.B);
 
 
-                    if (numericMaterialTransaprency.Value != 100)
+                    if (numericStudsTransparency.Value != 100)
                     {
-                        outputname += "-trans_" + numericMaterialTransaprency.Value;
-                        outputImage = ChangeTransparency(outputImage, numericMaterialTransaprency.Value);
+                        outputname += "-trans_" + numericStudsTransparency.Value;
+                        outputImage = ChangeTransparency(outputImage, numericStudsTransparency.Value);
                     }
 
                     outputImage.Save(textboxExport.Text + "\\" + outputname + ".png", ImageFormat.Png);
@@ -1628,10 +1628,10 @@ namespace ROBLOXTextureAssetStudio
                     string outputname = (studsCanvases[i] + "_" + pictureboxStudsColour.BackColor.R + "_" + pictureboxStudsColour.BackColor.G + "_" + pictureboxStudsColour.BackColor.B);
 
 
-                    if (numericMaterialTransaprency.Value != 100)
+                    if (numericStudsTransparency.Value != 100)
                     {
-                        outputname += "-trans_" + numericMaterialTransaprency.Value;
-                        outputImage = ChangeTransparency(outputImage, numericMaterialTransaprency.Value);
+                        outputname += "-trans_" + numericStudsTransparency.Value;
+                        outputImage = ChangeTransparency(outputImage, numericStudsTransparency.Value);
                     }
 
                     //Now we need to build the vmt
