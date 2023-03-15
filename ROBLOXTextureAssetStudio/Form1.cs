@@ -201,7 +201,7 @@ namespace ROBLOXTextureAssetStudio
             {
                 //Get decal details
                 string jsonString;
-                HttpWebRequest WebReq = (HttpWebRequest)WebRequest.Create(string.Format("https://api.roblox.com/marketplace/productinfo?assetId=" + DecalID));
+                HttpWebRequest WebReq = (HttpWebRequest)WebRequest.Create(string.Format("https://economy.roblox.com/v2/assets/" + DecalID+ "/details"));
                 WebReq.Method = "GET";
                 HttpWebResponse WebResp = (HttpWebResponse)WebReq.GetResponse();
                 using (Stream stream = WebResp.GetResponseStream())
@@ -225,9 +225,14 @@ namespace ROBLOXTextureAssetStudio
                 string IDToDownload = "";
                 if (decalDetails.AssetTypeId == "13")
                 {
+                    throw new InvalidDataException();
+
+                    //The API is broken now, thanks ROBLOX for deciding to deprecate your APIs a month after i started using this 10 year old API
+                    //For now we just have to throw an InvalidDataException
                     using (var client = new WebClient { })
                     {
                         //We need to get the actual image id
+                        //This API is now broken and F3X is probably not going to fix it.
                         IDToDownload = client.DownloadString("http://f3xteam.com/bt/getDecalImageID/" + DecalID);
                     }
                 }
