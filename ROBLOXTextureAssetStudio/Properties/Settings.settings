@@ -30,7 +30,7 @@
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="SurfaceType" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
+      <Value Profile="(Default)">13</Value>
     </Setting>
     <Setting Name="MaterialType" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>

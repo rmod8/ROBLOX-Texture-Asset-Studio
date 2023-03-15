@@ -133,7 +133,7 @@ namespace ROBLOXTextureAssetStudio.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("13")]
         public int SurfaceType {
             get {
                 return ((int)(this["SurfaceType"]));

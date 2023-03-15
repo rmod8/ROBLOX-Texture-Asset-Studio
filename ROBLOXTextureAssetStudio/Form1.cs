@@ -678,7 +678,6 @@ namespace ROBLOXTextureAssetStudio
             this.Enabled = false;
             if (isOutputPathValid(true))
             {
-                bool ConfirmedTransparent = false;
                 Image overlay = pictureboxColouredDecal.Image;
 
                 //Thanks https://stackoverflow.com/questions/1720160/how-do-i-fill-a-bitmap-with-a-solid-color
@@ -686,7 +685,7 @@ namespace ROBLOXTextureAssetStudio
                 using (Graphics gfx = Graphics.FromImage(canvas))
                 using (SolidBrush brush = new SolidBrush(Color.FromArgb(pictureboxColouredDecal.BackColor.R, pictureboxColouredDecal.BackColor.G, pictureboxColouredDecal.BackColor.B)))
                 {
-                    gfx.FillRectangle(brush, 0, 0, overlay.Width, overlay.Width);
+                    gfx.FillRectangle(brush, 0, 0, overlay.Width, overlay.Height);
                 }
                 Image underlayImage = (Image)canvas;
 
@@ -704,7 +703,6 @@ namespace ROBLOXTextureAssetStudio
                 {
                     outputname += "-trans_" + numericDPColourTransparency.Value;
                     underlayImage = ChangeTransparency(underlayImage, numericDPColourTransparency.Value);
-                    ConfirmedTransparent = true;
                 }
                 else
                     outputname += "-trans_100";
@@ -716,33 +714,6 @@ namespace ROBLOXTextureAssetStudio
                     gr.DrawImage(overlay, 0, 0, outputImage.Width, outputImage.Height);
                 }
 
-
-
-                //Prevents overwriting
-                if (ConfirmedTransparent)
-                {
-                    if (File.Exists(textboxExport.Text + "\\" + outputname + ".png"))
-                    {
-                        int counter = 1;
-                        while (File.Exists(textboxExport.Text + "\\" + outputname +"-"+ counter + ".png"))
-                        {
-                            counter++;
-                        }
-                        outputname += "-"+counter;
-                    }
-                }
-                else
-                {
-                    if (File.Exists(textboxExport.Text + "\\" + outputname + ".png"))
-                    {
-                        int counter = 1;
-                        while (File.Exists(textboxExport.Text + "\\" + outputname + counter + ".png"))
-                        {
-                            counter++;
-                        }
-                        outputname += counter;
-                    }
-                }
 
                 //Now we need to build the vmt
 
@@ -765,7 +736,6 @@ namespace ROBLOXTextureAssetStudio
             this.Enabled = false;
             if (isOutputPathValid(false))
             {
-                bool ConfirmedTransparent = false;
                 Image overlay = pictureboxColouredDecal.Image;
 
                 //Thanks https://stackoverflow.com/questions/1720160/how-do-i-fill-a-bitmap-with-a-solid-color
@@ -773,7 +743,7 @@ namespace ROBLOXTextureAssetStudio
                 using (Graphics gfx = Graphics.FromImage(canvas))
                 using (SolidBrush brush = new SolidBrush(Color.FromArgb(pictureboxColouredDecal.BackColor.R, pictureboxColouredDecal.BackColor.G, pictureboxColouredDecal.BackColor.B)))
                 {
-                    gfx.FillRectangle(brush, 0, 0, overlay.Width, overlay.Width);
+                    gfx.FillRectangle(brush, 0, 0, overlay.Width, overlay.Height);
                 }
                 Image underlayImage = (Image)canvas;
 
@@ -791,7 +761,6 @@ namespace ROBLOXTextureAssetStudio
                 {
                     outputname += "-trans_" + numericDPColourTransparency.Value;
                     underlayImage = ChangeTransparency(underlayImage, numericDPColourTransparency.Value);
-                    ConfirmedTransparent = true;
                 }
                 else
                     outputname += "-trans_100";
@@ -805,31 +774,6 @@ namespace ROBLOXTextureAssetStudio
 
 
 
-                //Prevents overwriting
-                if (ConfirmedTransparent)
-                {
-                    if (File.Exists(textboxExport.Text + "\\" + outputname + ".png"))
-                    {
-                        int counter = 1;
-                        while (File.Exists(textboxExport.Text + "\\" + outputname + "-" + counter + ".png"))
-                        {
-                            counter++;
-                        }
-                        outputname += "-" + counter;
-                    }
-                }
-                else
-                {
-                    if (File.Exists(textboxExport.Text + "\\" + outputname + ".png"))
-                    {
-                        int counter = 1;
-                        while (File.Exists(textboxExport.Text + "\\" + outputname + counter + ".png"))
-                        {
-                            counter++;
-                        }
-                        outputname += counter;
-                    }
-                }
 
                 outputImage.Save(textboxExport.Text + "\\" + outputname + ".png", ImageFormat.Png);
                 soundTada.Play();
@@ -842,7 +786,6 @@ namespace ROBLOXTextureAssetStudio
             this.Enabled = false;
             if (isOutputPathValid(true))
             {
-                bool ConfirmedTransparent = false;
                 Image overlay = pictureboxColouredDecal.Image;
 
                 //Thanks https://stackoverflow.com/questions/1720160/how-do-i-fill-a-bitmap-with-a-solid-color
@@ -868,7 +811,6 @@ namespace ROBLOXTextureAssetStudio
                 {
                     outputname += "-trans_" + numericDPColourTransparency.Value;
                     underlayImage = ChangeTransparency(underlayImage, numericDPColourTransparency.Value);
-                    ConfirmedTransparent = true;
                 }
                 else
                     outputname += "-trans_100";
@@ -880,33 +822,6 @@ namespace ROBLOXTextureAssetStudio
                     gr.DrawImage(overlay, 0, 0, outputImage.Width, outputImage.Height);
                 }
 
-
-
-                //Prevents overwriting
-                if (ConfirmedTransparent)
-                {
-                    if (File.Exists(textboxExport.Text + "\\" + outputname + ".vmt"))
-                    {
-                        int counter = 1;
-                        while (File.Exists(textboxExport.Text + "\\" + outputname + "-" + counter + ".vmt"))
-                        {
-                            counter++;
-                        }
-                        outputname += "-" + counter;
-                    }
-                }
-                else
-                {
-                    if (File.Exists(textboxExport.Text + "\\" + outputname + ".png"))
-                    {
-                        int counter = 1;
-                        while (File.Exists(textboxExport.Text + "\\" + outputname + counter + ".png"))
-                        {
-                            counter++;
-                        }
-                        outputname += counter;
-                    }
-                }
 
                 //Now we need to build the vmt
 
