@@ -1168,6 +1168,7 @@
             "Rounded Squares (March 2017)"});
             this.comboStudStyle.Name = "comboStudStyle";
             this.comboStudStyle.Size = new System.Drawing.Size(225, 25);
+            this.comboStudStyle.DropDownClosed += new System.EventHandler(this.comboStudStyle_DropDownClosed);
             this.comboStudStyle.SelectedIndexChanged += new System.EventHandler(this.comboMaterialStyle_SelectedIndexChanged);
             // 
             // toolStripSeparator1

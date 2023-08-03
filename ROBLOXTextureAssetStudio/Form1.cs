@@ -1579,13 +1579,6 @@ namespace ROBLOXTextureAssetStudio
             Process.Start("https://github.com/rmod8/ROBLOX-Texture-Asset-Studio");
         }
 
-        private void comboStudStyle_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.StudsStyle = comboStudStyle.SelectedIndex;
-            Properties.Settings.Default.Save();
-            ReplaceBaseImages();
-        }
-
         private void comboMaterialStyle_SelectedIndexChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default.MaterialsStyle = comboMaterialStyle.SelectedIndex;
@@ -1594,6 +1587,7 @@ namespace ROBLOXTextureAssetStudio
 
         private void ReplaceBaseImages()
         {
+            this.Enabled = false;
             switch (comboStudStyle.SelectedIndex)
             {
                 case 6:
@@ -1649,9 +1643,15 @@ namespace ROBLOXTextureAssetStudio
             templateInlets = (Bitmap)pictureboxStudsInlets.Image;
             templateUniversal = (Bitmap)pictureboxStudsUniversal.Image;
             templateGlue = (Bitmap)pictureboxStudsGlue.Image;
+            this.Enabled = true;
         }
 
-   
+        private void comboStudStyle_DropDownClosed(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.StudsStyle = comboStudStyle.SelectedIndex;
+            Properties.Settings.Default.Save();
+            ReplaceBaseImages();
+        }
     }
 
     //API Classes
