@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ROBLOX Texture Asset Studio 1.4")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("ROBLOX Texture Asset Studio 1.5")]
+[assembly: AssemblyDescription("Allows the user to export a variety of ROBLOX related images, primarily for the Source Engine.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ROBLOX Texture Asset Studio 1.4")]
+[assembly: AssemblyProduct("ROBLOX Texture Asset Studio 1.5")]
 [assembly: AssemblyCopyright("Copyright © rmod8 2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -31,5 +31,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.4")]
-[assembly: AssemblyFileVersion("1.0.0.4")]
+[assembly: AssemblyVersion("1.5.0")]
+[assembly: AssemblyFileVersion("1.5.0")]

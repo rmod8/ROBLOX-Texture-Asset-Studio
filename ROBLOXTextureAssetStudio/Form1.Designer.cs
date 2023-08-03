@@ -78,8 +78,12 @@
             this.buttonMaterialExport = new System.Windows.Forms.Button();
             this.pictureboxMaterial = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.buttonStudsExportAll = new System.Windows.Forms.Button();
             this.buttonStudsExportSelectedVMT = new System.Windows.Forms.Button();
+            this.buttonStudsExportPNG = new System.Windows.Forms.Button();
             this.buttonStudsExportSelectedPNG = new System.Windows.Forms.Button();
+            this.buttonStudsExportVMT = new System.Windows.Forms.Button();
             this.buttonStudsExportSelected = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.buttonStudsSmooth = new System.Windows.Forms.Button();
@@ -99,13 +103,19 @@
             this.pictureboxStudsInlets = new System.Windows.Forms.PictureBox();
             this.pictureboxStudsOutlets = new System.Windows.Forms.PictureBox();
             this.numericStudsIntensity = new System.Windows.Forms.NumericUpDown();
-            this.buttonStudsExportVMT = new System.Windows.Forms.Button();
-            this.buttonStudsExportPNG = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.numericStudsTransparency = new System.Windows.Forms.NumericUpDown();
             this.buttonStudsColourSelect = new System.Windows.Forms.Button();
             this.pictureboxStudsColour = new System.Windows.Forms.PictureBox();
-            this.buttonStudsExportAll = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.comboStudStyle = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.comboMaterialStyle = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.decalDownloader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericDecalTransparency)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DecalID)).BeginInit();
@@ -122,6 +132,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxMaterialColour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxMaterial)).BeginInit();
             this.groupBox4.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxStudsSmooth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxStudsGlue)).BeginInit();
@@ -131,6 +142,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericStudsIntensity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericStudsTransparency)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxStudsColour)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -156,9 +168,9 @@
             this.decalDownloader.Controls.Add(this.decalName);
             this.decalDownloader.Controls.Add(this.DecalID);
             this.decalDownloader.Controls.Add(this.pictureBoxDecal);
-            this.decalDownloader.Location = new System.Drawing.Point(12, 12);
+            this.decalDownloader.Location = new System.Drawing.Point(12, 28);
             this.decalDownloader.Name = "decalDownloader";
-            this.decalDownloader.Size = new System.Drawing.Size(213, 437);
+            this.decalDownloader.Size = new System.Drawing.Size(143, 330);
             this.decalDownloader.TabIndex = 1;
             this.decalDownloader.TabStop = false;
             this.decalDownloader.Text = "Decal Downloader";
@@ -166,9 +178,9 @@
             // decalDownloadPNG
             // 
             this.decalDownloadPNG.Enabled = false;
-            this.decalDownloadPNG.Location = new System.Drawing.Point(7, 376);
+            this.decalDownloadPNG.Location = new System.Drawing.Point(5, 271);
             this.decalDownloadPNG.Name = "decalDownloadPNG";
-            this.decalDownloadPNG.Size = new System.Drawing.Size(200, 23);
+            this.decalDownloadPNG.Size = new System.Drawing.Size(133, 23);
             this.decalDownloadPNG.TabIndex = 18;
             this.decalDownloadPNG.Text = "Export only PNG";
             this.decalDownloadPNG.UseVisualStyleBackColor = true;
@@ -177,9 +189,9 @@
             // decalDownloadVMT
             // 
             this.decalDownloadVMT.Enabled = false;
-            this.decalDownloadVMT.Location = new System.Drawing.Point(7, 405);
+            this.decalDownloadVMT.Location = new System.Drawing.Point(5, 300);
             this.decalDownloadVMT.Name = "decalDownloadVMT";
-            this.decalDownloadVMT.Size = new System.Drawing.Size(200, 23);
+            this.decalDownloadVMT.Size = new System.Drawing.Size(133, 23);
             this.decalDownloadVMT.TabIndex = 17;
             this.decalDownloadVMT.Text = "Export only VMT";
             this.decalDownloadVMT.UseVisualStyleBackColor = true;
@@ -188,7 +200,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(2, 297);
+            this.label8.Location = new System.Drawing.Point(2, 204);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(106, 13);
             this.label8.TabIndex = 16;
@@ -196,14 +208,14 @@
             // 
             // numericDecalTransparency
             // 
-            this.numericDecalTransparency.Location = new System.Drawing.Point(5, 312);
+            this.numericDecalTransparency.Location = new System.Drawing.Point(5, 219);
             this.numericDecalTransparency.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.numericDecalTransparency.Name = "numericDecalTransparency";
-            this.numericDecalTransparency.Size = new System.Drawing.Size(201, 20);
+            this.numericDecalTransparency.Size = new System.Drawing.Size(133, 20);
             this.numericDecalTransparency.TabIndex = 15;
             this.numericDecalTransparency.Value = new decimal(new int[] {
             100,
@@ -214,7 +226,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 222);
+            this.label3.Location = new System.Drawing.Point(6, 129);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 5;
@@ -223,9 +235,9 @@
             // decalDownloadExportButton
             // 
             this.decalDownloadExportButton.Enabled = false;
-            this.decalDownloadExportButton.Location = new System.Drawing.Point(7, 347);
+            this.decalDownloadExportButton.Location = new System.Drawing.Point(5, 245);
             this.decalDownloadExportButton.Name = "decalDownloadExportButton";
-            this.decalDownloadExportButton.Size = new System.Drawing.Size(200, 23);
+            this.decalDownloadExportButton.Size = new System.Drawing.Size(133, 23);
             this.decalDownloadExportButton.TabIndex = 4;
             this.decalDownloadExportButton.Text = "Export";
             this.decalDownloadExportButton.UseVisualStyleBackColor = true;
@@ -234,7 +246,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 260);
+            this.label2.Location = new System.Drawing.Point(6, 167);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 3;
@@ -243,22 +255,22 @@
             // decalName
             // 
             this.decalName.BackColor = System.Drawing.SystemColors.Control;
-            this.decalName.Location = new System.Drawing.Point(6, 238);
+            this.decalName.Location = new System.Drawing.Point(5, 145);
             this.decalName.Name = "decalName";
-            this.decalName.Size = new System.Drawing.Size(200, 20);
+            this.decalName.Size = new System.Drawing.Size(133, 20);
             this.decalName.TabIndex = 2;
             this.decalName.TextChanged += new System.EventHandler(this.decalName_TextChanged);
             // 
             // DecalID
             // 
-            this.DecalID.Location = new System.Drawing.Point(6, 276);
+            this.DecalID.Location = new System.Drawing.Point(6, 183);
             this.DecalID.Maximum = new decimal(new int[] {
             1316134911,
             2328,
             0,
             0});
             this.DecalID.Name = "DecalID";
-            this.DecalID.Size = new System.Drawing.Size(200, 20);
+            this.DecalID.Size = new System.Drawing.Size(132, 20);
             this.DecalID.TabIndex = 1;
             this.DecalID.ValueChanged += new System.EventHandler(this.DecalID_ValueChanged);
             this.DecalID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DecalID_KeyDown);
@@ -269,9 +281,9 @@
             this.pictureBoxDecal.BackgroundImage = global::ROBLOXTextureAssetStudio.Properties.Resources.MissingTexture;
             this.pictureBoxDecal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxDecal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxDecal.Location = new System.Drawing.Point(6, 19);
+            this.pictureBoxDecal.Location = new System.Drawing.Point(20, 19);
             this.pictureBoxDecal.Name = "pictureBoxDecal";
-            this.pictureBoxDecal.Size = new System.Drawing.Size(200, 200);
+            this.pictureBoxDecal.Size = new System.Drawing.Size(101, 101);
             this.pictureBoxDecal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxDecal.TabIndex = 0;
             this.pictureBoxDecal.TabStop = false;
@@ -307,9 +319,9 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.decalPaintExportButton);
             this.groupBox1.Controls.Add(this.pictureboxColouredDecal);
-            this.groupBox1.Location = new System.Drawing.Point(231, 12);
+            this.groupBox1.Location = new System.Drawing.Point(161, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(212, 437);
+            this.groupBox1.Size = new System.Drawing.Size(143, 330);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Decal Painter";
@@ -317,9 +329,9 @@
             // decalPaintExportVMTButton
             // 
             this.decalPaintExportVMTButton.Enabled = false;
-            this.decalPaintExportVMTButton.Location = new System.Drawing.Point(6, 405);
+            this.decalPaintExportVMTButton.Location = new System.Drawing.Point(10, 300);
             this.decalPaintExportVMTButton.Name = "decalPaintExportVMTButton";
-            this.decalPaintExportVMTButton.Size = new System.Drawing.Size(200, 23);
+            this.decalPaintExportVMTButton.Size = new System.Drawing.Size(126, 23);
             this.decalPaintExportVMTButton.TabIndex = 20;
             this.decalPaintExportVMTButton.Text = "Export only VMT";
             this.decalPaintExportVMTButton.UseVisualStyleBackColor = true;
@@ -328,9 +340,9 @@
             // decalPaintExportPNGButton
             // 
             this.decalPaintExportPNGButton.Enabled = false;
-            this.decalPaintExportPNGButton.Location = new System.Drawing.Point(6, 376);
+            this.decalPaintExportPNGButton.Location = new System.Drawing.Point(9, 274);
             this.decalPaintExportPNGButton.Name = "decalPaintExportPNGButton";
-            this.decalPaintExportPNGButton.Size = new System.Drawing.Size(200, 23);
+            this.decalPaintExportPNGButton.Size = new System.Drawing.Size(126, 23);
             this.decalPaintExportPNGButton.TabIndex = 19;
             this.decalPaintExportPNGButton.Text = "Export only PNG";
             this.decalPaintExportPNGButton.UseVisualStyleBackColor = true;
@@ -339,7 +351,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 261);
+            this.label6.Location = new System.Drawing.Point(7, 168);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(108, 13);
             this.label6.TabIndex = 12;
@@ -348,7 +360,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 297);
+            this.label7.Location = new System.Drawing.Point(6, 208);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(106, 13);
             this.label7.TabIndex = 14;
@@ -356,14 +368,14 @@
             // 
             // numericDPDecalTransparency
             // 
-            this.numericDPDecalTransparency.Location = new System.Drawing.Point(9, 312);
+            this.numericDPDecalTransparency.Location = new System.Drawing.Point(9, 220);
             this.numericDPDecalTransparency.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.numericDPDecalTransparency.Name = "numericDPDecalTransparency";
-            this.numericDPDecalTransparency.Size = new System.Drawing.Size(197, 20);
+            this.numericDPDecalTransparency.Size = new System.Drawing.Size(123, 20);
             this.numericDPDecalTransparency.TabIndex = 13;
             this.numericDPDecalTransparency.Value = new decimal(new int[] {
             100,
@@ -373,14 +385,14 @@
             // 
             // numericDPColourTransparency
             // 
-            this.numericDPColourTransparency.Location = new System.Drawing.Point(9, 276);
+            this.numericDPColourTransparency.Location = new System.Drawing.Point(9, 184);
             this.numericDPColourTransparency.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.numericDPColourTransparency.Name = "numericDPColourTransparency";
-            this.numericDPColourTransparency.Size = new System.Drawing.Size(197, 20);
+            this.numericDPColourTransparency.Size = new System.Drawing.Size(123, 20);
             this.numericDPColourTransparency.TabIndex = 11;
             this.numericDPColourTransparency.Value = new decimal(new int[] {
             100,
@@ -390,9 +402,9 @@
             // 
             // buttonColourSelect
             // 
-            this.buttonColourSelect.Location = new System.Drawing.Point(62, 238);
+            this.buttonColourSelect.Location = new System.Drawing.Point(48, 145);
             this.buttonColourSelect.Name = "buttonColourSelect";
-            this.buttonColourSelect.Size = new System.Drawing.Size(123, 20);
+            this.buttonColourSelect.Size = new System.Drawing.Size(84, 20);
             this.buttonColourSelect.TabIndex = 10;
             this.buttonColourSelect.Text = "Select Colour";
             this.buttonColourSelect.UseVisualStyleBackColor = true;
@@ -401,7 +413,7 @@
             // pictureboxColour
             // 
             this.pictureboxColour.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureboxColour.Location = new System.Drawing.Point(21, 238);
+            this.pictureboxColour.Location = new System.Drawing.Point(10, 145);
             this.pictureboxColour.Name = "pictureboxColour";
             this.pictureboxColour.Size = new System.Drawing.Size(35, 20);
             this.pictureboxColour.TabIndex = 9;
@@ -410,7 +422,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(38, 222);
+            this.label5.Location = new System.Drawing.Point(7, 129);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(132, 13);
             this.label5.TabIndex = 8;
@@ -419,9 +431,9 @@
             // decalPaintExportButton
             // 
             this.decalPaintExportButton.Enabled = false;
-            this.decalPaintExportButton.Location = new System.Drawing.Point(6, 347);
+            this.decalPaintExportButton.Location = new System.Drawing.Point(9, 246);
             this.decalPaintExportButton.Name = "decalPaintExportButton";
-            this.decalPaintExportButton.Size = new System.Drawing.Size(200, 23);
+            this.decalPaintExportButton.Size = new System.Drawing.Size(126, 23);
             this.decalPaintExportButton.TabIndex = 7;
             this.decalPaintExportButton.Text = "Export";
             this.decalPaintExportButton.UseVisualStyleBackColor = true;
@@ -432,9 +444,9 @@
             this.pictureboxColouredDecal.BackColor = System.Drawing.Color.White;
             this.pictureboxColouredDecal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureboxColouredDecal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureboxColouredDecal.Location = new System.Drawing.Point(6, 19);
+            this.pictureboxColouredDecal.Location = new System.Drawing.Point(21, 19);
             this.pictureboxColouredDecal.Name = "pictureboxColouredDecal";
-            this.pictureboxColouredDecal.Size = new System.Drawing.Size(200, 200);
+            this.pictureboxColouredDecal.Size = new System.Drawing.Size(101, 101);
             this.pictureboxColouredDecal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureboxColouredDecal.TabIndex = 6;
             this.pictureboxColouredDecal.TabStop = false;
@@ -452,9 +464,9 @@
             this.groupBox2.Controls.Add(this.textboxExport);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 455);
+            this.groupBox2.Location = new System.Drawing.Point(12, 356);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(995, 101);
+            this.groupBox2.Size = new System.Drawing.Size(935, 101);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Export Settings:";
@@ -475,7 +487,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(669, 56);
+            this.label10.Location = new System.Drawing.Point(661, 56);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(100, 13);
             this.label10.TabIndex = 11;
@@ -506,16 +518,16 @@
             "Water",
             "Watermelon",
             "Wood"});
-            this.comboSurfaceType.Location = new System.Drawing.Point(669, 72);
+            this.comboSurfaceType.Location = new System.Drawing.Point(661, 72);
             this.comboSurfaceType.Name = "comboSurfaceType";
-            this.comboSurfaceType.Size = new System.Drawing.Size(306, 21);
+            this.comboSurfaceType.Size = new System.Drawing.Size(266, 21);
             this.comboSurfaceType.TabIndex = 10;
             this.comboSurfaceType.SelectedIndexChanged += new System.EventHandler(this.comboSurfaceType_SelectedIndexChanged);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(669, 6);
+            this.label9.Location = new System.Drawing.Point(661, 6);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(70, 13);
             this.label9.TabIndex = 9;
@@ -528,9 +540,9 @@
             "LightmappedGeneric - [Brush Texture; Shadows]",
             "VertexLitGeneric - [Model Texture]",
             "UnlitGeneric - [Brush & Model Texture; No Shadows]"});
-            this.comboShaderType.Location = new System.Drawing.Point(669, 23);
+            this.comboShaderType.Location = new System.Drawing.Point(661, 23);
             this.comboShaderType.Name = "comboShaderType";
-            this.comboShaderType.Size = new System.Drawing.Size(306, 21);
+            this.comboShaderType.Size = new System.Drawing.Size(266, 21);
             this.comboShaderType.TabIndex = 8;
             this.comboShaderType.SelectedIndexChanged += new System.EventHandler(this.comboShaderType_SelectedIndexChanged);
             // 
@@ -567,9 +579,9 @@
             this.groupBox3.Controls.Add(this.pictureboxMaterialColour);
             this.groupBox3.Controls.Add(this.buttonMaterialExport);
             this.groupBox3.Controls.Add(this.pictureboxMaterial);
-            this.groupBox3.Location = new System.Drawing.Point(449, 12);
+            this.groupBox3.Location = new System.Drawing.Point(310, 28);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(212, 437);
+            this.groupBox3.Size = new System.Drawing.Size(143, 330);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Material Painter";
@@ -577,7 +589,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(31, 323);
+            this.label15.Location = new System.Drawing.Point(88, 167);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(49, 13);
             this.label15.TabIndex = 23;
@@ -585,9 +597,9 @@
             // 
             // buttonMaterialUpdate
             // 
-            this.buttonMaterialUpdate.Location = new System.Drawing.Point(9, 222);
+            this.buttonMaterialUpdate.Location = new System.Drawing.Point(9, 121);
             this.buttonMaterialUpdate.Name = "buttonMaterialUpdate";
-            this.buttonMaterialUpdate.Size = new System.Drawing.Size(59, 22);
+            this.buttonMaterialUpdate.Size = new System.Drawing.Size(126, 22);
             this.buttonMaterialUpdate.TabIndex = 7;
             this.buttonMaterialUpdate.Text = "Update";
             this.buttonMaterialUpdate.UseVisualStyleBackColor = true;
@@ -601,14 +613,14 @@
             0,
             0,
             131072});
-            this.numericMaterialIntensity.Location = new System.Drawing.Point(86, 321);
+            this.numericMaterialIntensity.Location = new System.Drawing.Point(91, 183);
             this.numericMaterialIntensity.Maximum = new decimal(new int[] {
             2,
             0,
             0,
             0});
             this.numericMaterialIntensity.Name = "numericMaterialIntensity";
-            this.numericMaterialIntensity.Size = new System.Drawing.Size(120, 20);
+            this.numericMaterialIntensity.Size = new System.Drawing.Size(44, 20);
             this.numericMaterialIntensity.TabIndex = 22;
             this.numericMaterialIntensity.Value = new decimal(new int[] {
             1,
@@ -620,7 +632,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 280);
+            this.label12.Location = new System.Drawing.Point(6, 205);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(47, 13);
             this.label12.TabIndex = 21;
@@ -645,18 +657,18 @@
             "Marble",
             "Pebble",
             "Cobblestone"});
-            this.comboMaterialType.Location = new System.Drawing.Point(9, 294);
+            this.comboMaterialType.Location = new System.Drawing.Point(9, 218);
             this.comboMaterialType.Name = "comboMaterialType";
-            this.comboMaterialType.Size = new System.Drawing.Size(197, 21);
+            this.comboMaterialType.Size = new System.Drawing.Size(126, 21);
             this.comboMaterialType.TabIndex = 21;
             this.comboMaterialType.SelectedIndexChanged += new System.EventHandler(this.comboMaterialType_SelectedIndexChanged);
             // 
             // buttonMaterialExportVMT
             // 
             this.buttonMaterialExportVMT.Enabled = false;
-            this.buttonMaterialExportVMT.Location = new System.Drawing.Point(6, 405);
+            this.buttonMaterialExportVMT.Location = new System.Drawing.Point(9, 301);
             this.buttonMaterialExportVMT.Name = "buttonMaterialExportVMT";
-            this.buttonMaterialExportVMT.Size = new System.Drawing.Size(200, 23);
+            this.buttonMaterialExportVMT.Size = new System.Drawing.Size(126, 23);
             this.buttonMaterialExportVMT.TabIndex = 20;
             this.buttonMaterialExportVMT.Text = "Export only VMT";
             this.buttonMaterialExportVMT.UseVisualStyleBackColor = true;
@@ -665,9 +677,9 @@
             // buttonMaterialExportPNG
             // 
             this.buttonMaterialExportPNG.Enabled = false;
-            this.buttonMaterialExportPNG.Location = new System.Drawing.Point(6, 376);
+            this.buttonMaterialExportPNG.Location = new System.Drawing.Point(9, 272);
             this.buttonMaterialExportPNG.Name = "buttonMaterialExportPNG";
-            this.buttonMaterialExportPNG.Size = new System.Drawing.Size(200, 23);
+            this.buttonMaterialExportPNG.Size = new System.Drawing.Size(126, 23);
             this.buttonMaterialExportPNG.TabIndex = 19;
             this.buttonMaterialExportPNG.Text = "Export only PNG";
             this.buttonMaterialExportPNG.UseVisualStyleBackColor = true;
@@ -676,22 +688,22 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 244);
+            this.label11.Location = new System.Drawing.Point(6, 167);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(115, 13);
+            this.label11.Size = new System.Drawing.Size(75, 13);
             this.label11.TabIndex = 12;
-            this.label11.Text = "Material Transparency:";
+            this.label11.Text = "Transparency:";
             // 
             // numericMaterialTransaprency
             // 
-            this.numericMaterialTransaprency.Location = new System.Drawing.Point(9, 259);
+            this.numericMaterialTransaprency.Location = new System.Drawing.Point(9, 183);
             this.numericMaterialTransaprency.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.numericMaterialTransaprency.Name = "numericMaterialTransaprency";
-            this.numericMaterialTransaprency.Size = new System.Drawing.Size(197, 20);
+            this.numericMaterialTransaprency.Size = new System.Drawing.Size(44, 20);
             this.numericMaterialTransaprency.TabIndex = 11;
             this.numericMaterialTransaprency.Value = new decimal(new int[] {
             100,
@@ -701,9 +713,9 @@
             // 
             // buttonMaterialColourSelect
             // 
-            this.buttonMaterialColourSelect.Location = new System.Drawing.Point(115, 222);
+            this.buttonMaterialColourSelect.Location = new System.Drawing.Point(47, 143);
             this.buttonMaterialColourSelect.Name = "buttonMaterialColourSelect";
-            this.buttonMaterialColourSelect.Size = new System.Drawing.Size(91, 20);
+            this.buttonMaterialColourSelect.Size = new System.Drawing.Size(88, 20);
             this.buttonMaterialColourSelect.TabIndex = 10;
             this.buttonMaterialColourSelect.Text = "Select Colour";
             this.buttonMaterialColourSelect.UseVisualStyleBackColor = true;
@@ -712,7 +724,7 @@
             // pictureboxMaterialColour
             // 
             this.pictureboxMaterialColour.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureboxMaterialColour.Location = new System.Drawing.Point(74, 222);
+            this.pictureboxMaterialColour.Location = new System.Drawing.Point(9, 144);
             this.pictureboxMaterialColour.Name = "pictureboxMaterialColour";
             this.pictureboxMaterialColour.Size = new System.Drawing.Size(35, 20);
             this.pictureboxMaterialColour.TabIndex = 9;
@@ -721,9 +733,9 @@
             // buttonMaterialExport
             // 
             this.buttonMaterialExport.Enabled = false;
-            this.buttonMaterialExport.Location = new System.Drawing.Point(6, 347);
+            this.buttonMaterialExport.Location = new System.Drawing.Point(9, 243);
             this.buttonMaterialExport.Name = "buttonMaterialExport";
-            this.buttonMaterialExport.Size = new System.Drawing.Size(200, 23);
+            this.buttonMaterialExport.Size = new System.Drawing.Size(126, 23);
             this.buttonMaterialExport.TabIndex = 7;
             this.buttonMaterialExport.Text = "Export";
             this.buttonMaterialExport.UseVisualStyleBackColor = true;
@@ -735,18 +747,16 @@
             this.pictureboxMaterial.BackgroundImage = global::ROBLOXTextureAssetStudio.Properties.Resources.MissingTexture;
             this.pictureboxMaterial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureboxMaterial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureboxMaterial.Location = new System.Drawing.Point(6, 19);
+            this.pictureboxMaterial.Location = new System.Drawing.Point(22, 14);
             this.pictureboxMaterial.Name = "pictureboxMaterial";
-            this.pictureboxMaterial.Size = new System.Drawing.Size(200, 200);
+            this.pictureboxMaterial.Size = new System.Drawing.Size(101, 101);
             this.pictureboxMaterial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureboxMaterial.TabIndex = 6;
             this.pictureboxMaterial.TabStop = false;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.buttonStudsExportSelectedVMT);
-            this.groupBox4.Controls.Add(this.buttonStudsExportSelectedPNG);
-            this.groupBox4.Controls.Add(this.buttonStudsExportSelected);
+            this.groupBox4.Controls.Add(this.groupBox6);
             this.groupBox4.Controls.Add(this.groupBox5);
             this.groupBox4.Controls.Add(this.checkStudsGlue);
             this.groupBox4.Controls.Add(this.checkStudsUniversal);
@@ -761,48 +771,93 @@
             this.groupBox4.Controls.Add(this.pictureboxStudsInlets);
             this.groupBox4.Controls.Add(this.pictureboxStudsOutlets);
             this.groupBox4.Controls.Add(this.numericStudsIntensity);
-            this.groupBox4.Controls.Add(this.buttonStudsExportVMT);
-            this.groupBox4.Controls.Add(this.buttonStudsExportPNG);
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Controls.Add(this.numericStudsTransparency);
             this.groupBox4.Controls.Add(this.buttonStudsColourSelect);
             this.groupBox4.Controls.Add(this.pictureboxStudsColour);
-            this.groupBox4.Controls.Add(this.buttonStudsExportAll);
-            this.groupBox4.Location = new System.Drawing.Point(667, 12);
+            this.groupBox4.Location = new System.Drawing.Point(459, 28);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(340, 437);
+            this.groupBox4.Size = new System.Drawing.Size(488, 330);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Stud Printer";
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.buttonStudsExportAll);
+            this.groupBox6.Controls.Add(this.buttonStudsExportSelectedVMT);
+            this.groupBox6.Controls.Add(this.buttonStudsExportPNG);
+            this.groupBox6.Controls.Add(this.buttonStudsExportSelectedPNG);
+            this.groupBox6.Controls.Add(this.buttonStudsExportVMT);
+            this.groupBox6.Controls.Add(this.buttonStudsExportSelected);
+            this.groupBox6.Location = new System.Drawing.Point(336, 19);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(146, 239);
+            this.groupBox6.TabIndex = 43;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Export Options:";
+            // 
+            // buttonStudsExportAll
+            // 
+            this.buttonStudsExportAll.Enabled = false;
+            this.buttonStudsExportAll.Location = new System.Drawing.Point(-1, 26);
+            this.buttonStudsExportAll.Name = "buttonStudsExportAll";
+            this.buttonStudsExportAll.Size = new System.Drawing.Size(146, 23);
+            this.buttonStudsExportAll.TabIndex = 7;
+            this.buttonStudsExportAll.Text = "Export All";
+            this.buttonStudsExportAll.UseVisualStyleBackColor = true;
+            this.buttonStudsExportAll.Click += new System.EventHandler(this.buttonStudsExportAll_Click);
+            // 
             // buttonStudsExportSelectedVMT
             // 
             this.buttonStudsExportSelectedVMT.Enabled = false;
-            this.buttonStudsExportSelectedVMT.Location = new System.Drawing.Point(178, 405);
+            this.buttonStudsExportSelectedVMT.Location = new System.Drawing.Point(-1, 186);
             this.buttonStudsExportSelectedVMT.Name = "buttonStudsExportSelectedVMT";
-            this.buttonStudsExportSelectedVMT.Size = new System.Drawing.Size(156, 23);
+            this.buttonStudsExportSelectedVMT.Size = new System.Drawing.Size(146, 23);
             this.buttonStudsExportSelectedVMT.TabIndex = 42;
             this.buttonStudsExportSelectedVMT.Text = "Export Selected only VMT";
             this.buttonStudsExportSelectedVMT.UseVisualStyleBackColor = true;
             this.buttonStudsExportSelectedVMT.Click += new System.EventHandler(this.buttonStudsExportSelectedVMT_Click);
             // 
+            // buttonStudsExportPNG
+            // 
+            this.buttonStudsExportPNG.Enabled = false;
+            this.buttonStudsExportPNG.Location = new System.Drawing.Point(-1, 53);
+            this.buttonStudsExportPNG.Name = "buttonStudsExportPNG";
+            this.buttonStudsExportPNG.Size = new System.Drawing.Size(146, 23);
+            this.buttonStudsExportPNG.TabIndex = 19;
+            this.buttonStudsExportPNG.Text = "Export All only PNG";
+            this.buttonStudsExportPNG.UseVisualStyleBackColor = true;
+            this.buttonStudsExportPNG.Click += new System.EventHandler(this.buttonStudsExportPNG_Click);
+            // 
             // buttonStudsExportSelectedPNG
             // 
             this.buttonStudsExportSelectedPNG.Enabled = false;
-            this.buttonStudsExportSelectedPNG.Location = new System.Drawing.Point(178, 376);
+            this.buttonStudsExportSelectedPNG.Location = new System.Drawing.Point(-1, 157);
             this.buttonStudsExportSelectedPNG.Name = "buttonStudsExportSelectedPNG";
-            this.buttonStudsExportSelectedPNG.Size = new System.Drawing.Size(156, 23);
+            this.buttonStudsExportSelectedPNG.Size = new System.Drawing.Size(146, 23);
             this.buttonStudsExportSelectedPNG.TabIndex = 41;
             this.buttonStudsExportSelectedPNG.Text = "Export Selected only PNG";
             this.buttonStudsExportSelectedPNG.UseVisualStyleBackColor = true;
             this.buttonStudsExportSelectedPNG.Click += new System.EventHandler(this.buttonStudsExportSelectedPNG_Click);
             // 
+            // buttonStudsExportVMT
+            // 
+            this.buttonStudsExportVMT.Enabled = false;
+            this.buttonStudsExportVMT.Location = new System.Drawing.Point(-1, 81);
+            this.buttonStudsExportVMT.Name = "buttonStudsExportVMT";
+            this.buttonStudsExportVMT.Size = new System.Drawing.Size(146, 23);
+            this.buttonStudsExportVMT.TabIndex = 20;
+            this.buttonStudsExportVMT.Text = "Export All only VMT";
+            this.buttonStudsExportVMT.UseVisualStyleBackColor = true;
+            this.buttonStudsExportVMT.Click += new System.EventHandler(this.buttonStudsExportVMT_Click);
+            // 
             // buttonStudsExportSelected
             // 
             this.buttonStudsExportSelected.Enabled = false;
-            this.buttonStudsExportSelected.Location = new System.Drawing.Point(178, 347);
+            this.buttonStudsExportSelected.Location = new System.Drawing.Point(-1, 128);
             this.buttonStudsExportSelected.Name = "buttonStudsExportSelected";
-            this.buttonStudsExportSelected.Size = new System.Drawing.Size(156, 23);
+            this.buttonStudsExportSelected.Size = new System.Drawing.Size(146, 23);
             this.buttonStudsExportSelected.TabIndex = 40;
             this.buttonStudsExportSelected.Text = "Export Selected";
             this.buttonStudsExportSelected.UseVisualStyleBackColor = true;
@@ -814,9 +869,9 @@
             this.groupBox5.Controls.Add(this.buttonStudsNone);
             this.groupBox5.Controls.Add(this.buttonStudsAll);
             this.groupBox5.Controls.Add(this.buttonStudsInvert);
-            this.groupBox5.Location = new System.Drawing.Point(221, 129);
+            this.groupBox5.Location = new System.Drawing.Point(230, 129);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(113, 129);
+            this.groupBox5.Size = new System.Drawing.Size(100, 129);
             this.groupBox5.TabIndex = 39;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Selection Tools:";
@@ -825,7 +880,7 @@
             // 
             this.buttonStudsSmooth.Location = new System.Drawing.Point(6, 101);
             this.buttonStudsSmooth.Name = "buttonStudsSmooth";
-            this.buttonStudsSmooth.Size = new System.Drawing.Size(101, 22);
+            this.buttonStudsSmooth.Size = new System.Drawing.Size(86, 22);
             this.buttonStudsSmooth.TabIndex = 41;
             this.buttonStudsSmooth.Text = "Smooth Only";
             this.buttonStudsSmooth.UseVisualStyleBackColor = true;
@@ -835,7 +890,7 @@
             // 
             this.buttonStudsNone.Location = new System.Drawing.Point(6, 75);
             this.buttonStudsNone.Name = "buttonStudsNone";
-            this.buttonStudsNone.Size = new System.Drawing.Size(101, 22);
+            this.buttonStudsNone.Size = new System.Drawing.Size(86, 22);
             this.buttonStudsNone.TabIndex = 40;
             this.buttonStudsNone.Text = "Select None";
             this.buttonStudsNone.UseVisualStyleBackColor = true;
@@ -845,7 +900,7 @@
             // 
             this.buttonStudsAll.Location = new System.Drawing.Point(6, 47);
             this.buttonStudsAll.Name = "buttonStudsAll";
-            this.buttonStudsAll.Size = new System.Drawing.Size(101, 22);
+            this.buttonStudsAll.Size = new System.Drawing.Size(84, 22);
             this.buttonStudsAll.TabIndex = 39;
             this.buttonStudsAll.Text = "Select All";
             this.buttonStudsAll.UseVisualStyleBackColor = true;
@@ -855,7 +910,7 @@
             // 
             this.buttonStudsInvert.Location = new System.Drawing.Point(6, 19);
             this.buttonStudsInvert.Name = "buttonStudsInvert";
-            this.buttonStudsInvert.Size = new System.Drawing.Size(101, 22);
+            this.buttonStudsInvert.Size = new System.Drawing.Size(86, 22);
             this.buttonStudsInvert.TabIndex = 38;
             this.buttonStudsInvert.Text = "Invert";
             this.buttonStudsInvert.UseVisualStyleBackColor = true;
@@ -920,9 +975,9 @@
             // 
             // buttonStudsUpdate
             // 
-            this.buttonStudsUpdate.Location = new System.Drawing.Point(178, 276);
+            this.buttonStudsUpdate.Location = new System.Drawing.Point(280, 264);
             this.buttonStudsUpdate.Name = "buttonStudsUpdate";
-            this.buttonStudsUpdate.Size = new System.Drawing.Size(156, 27);
+            this.buttonStudsUpdate.Size = new System.Drawing.Size(200, 30);
             this.buttonStudsUpdate.TabIndex = 7;
             this.buttonStudsUpdate.Text = "Update";
             this.buttonStudsUpdate.UseVisualStyleBackColor = true;
@@ -942,7 +997,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(259, 306);
+            this.label20.Location = new System.Drawing.Point(225, 258);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(49, 13);
             this.label20.TabIndex = 24;
@@ -1008,14 +1063,14 @@
             0,
             0,
             131072});
-            this.numericStudsIntensity.Location = new System.Drawing.Point(264, 319);
+            this.numericStudsIntensity.Location = new System.Drawing.Point(228, 273);
             this.numericStudsIntensity.Maximum = new decimal(new int[] {
             2,
             0,
             0,
             0});
             this.numericStudsIntensity.Name = "numericStudsIntensity";
-            this.numericStudsIntensity.Size = new System.Drawing.Size(66, 20);
+            this.numericStudsIntensity.Size = new System.Drawing.Size(46, 20);
             this.numericStudsIntensity.TabIndex = 22;
             this.numericStudsIntensity.Value = new decimal(new int[] {
             1,
@@ -1024,47 +1079,25 @@
             0});
             this.numericStudsIntensity.ValueChanged += new System.EventHandler(this.numericStudsIntensity_ValueChanged);
             // 
-            // buttonStudsExportVMT
-            // 
-            this.buttonStudsExportVMT.Enabled = false;
-            this.buttonStudsExportVMT.Location = new System.Drawing.Point(6, 405);
-            this.buttonStudsExportVMT.Name = "buttonStudsExportVMT";
-            this.buttonStudsExportVMT.Size = new System.Drawing.Size(156, 23);
-            this.buttonStudsExportVMT.TabIndex = 20;
-            this.buttonStudsExportVMT.Text = "Export All only VMT";
-            this.buttonStudsExportVMT.UseVisualStyleBackColor = true;
-            this.buttonStudsExportVMT.Click += new System.EventHandler(this.buttonStudsExportVMT_Click);
-            // 
-            // buttonStudsExportPNG
-            // 
-            this.buttonStudsExportPNG.Enabled = false;
-            this.buttonStudsExportPNG.Location = new System.Drawing.Point(6, 376);
-            this.buttonStudsExportPNG.Name = "buttonStudsExportPNG";
-            this.buttonStudsExportPNG.Size = new System.Drawing.Size(156, 23);
-            this.buttonStudsExportPNG.TabIndex = 19;
-            this.buttonStudsExportPNG.Text = "Export All only PNG";
-            this.buttonStudsExportPNG.UseVisualStyleBackColor = true;
-            this.buttonStudsExportPNG.Click += new System.EventHandler(this.buttonStudsExportPNG_Click);
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 264);
+            this.label14.Location = new System.Drawing.Point(142, 258);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(100, 13);
+            this.label14.Size = new System.Drawing.Size(75, 13);
             this.label14.TabIndex = 12;
-            this.label14.Text = "Stud Transparency:";
+            this.label14.Text = "Transparency:";
             // 
             // numericStudsTransparency
             // 
-            this.numericStudsTransparency.Location = new System.Drawing.Point(6, 279);
+            this.numericStudsTransparency.Location = new System.Drawing.Point(145, 273);
             this.numericStudsTransparency.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.numericStudsTransparency.Name = "numericStudsTransparency";
-            this.numericStudsTransparency.Size = new System.Drawing.Size(166, 20);
+            this.numericStudsTransparency.Size = new System.Drawing.Size(47, 20);
             this.numericStudsTransparency.TabIndex = 11;
             this.numericStudsTransparency.Value = new decimal(new int[] {
             100,
@@ -1074,9 +1107,9 @@
             // 
             // buttonStudsColourSelect
             // 
-            this.buttonStudsColourSelect.Location = new System.Drawing.Point(62, 312);
+            this.buttonStudsColourSelect.Location = new System.Drawing.Point(50, 271);
             this.buttonStudsColourSelect.Name = "buttonStudsColourSelect";
-            this.buttonStudsColourSelect.Size = new System.Drawing.Size(191, 29);
+            this.buttonStudsColourSelect.Size = new System.Drawing.Size(88, 20);
             this.buttonStudsColourSelect.TabIndex = 10;
             this.buttonStudsColourSelect.Text = "Select Colour";
             this.buttonStudsColourSelect.UseVisualStyleBackColor = true;
@@ -1085,28 +1118,97 @@
             // pictureboxStudsColour
             // 
             this.pictureboxStudsColour.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureboxStudsColour.Location = new System.Drawing.Point(8, 312);
+            this.pictureboxStudsColour.Location = new System.Drawing.Point(9, 271);
             this.pictureboxStudsColour.Name = "pictureboxStudsColour";
-            this.pictureboxStudsColour.Size = new System.Drawing.Size(44, 29);
+            this.pictureboxStudsColour.Size = new System.Drawing.Size(35, 20);
             this.pictureboxStudsColour.TabIndex = 9;
             this.pictureboxStudsColour.TabStop = false;
             // 
-            // buttonStudsExportAll
+            // toolStrip1
             // 
-            this.buttonStudsExportAll.Enabled = false;
-            this.buttonStudsExportAll.Location = new System.Drawing.Point(6, 347);
-            this.buttonStudsExportAll.Name = "buttonStudsExportAll";
-            this.buttonStudsExportAll.Size = new System.Drawing.Size(156, 23);
-            this.buttonStudsExportAll.TabIndex = 7;
-            this.buttonStudsExportAll.Text = "Export All";
-            this.buttonStudsExportAll.UseVisualStyleBackColor = true;
-            this.buttonStudsExportAll.Click += new System.EventHandler(this.buttonStudsExportAll_Click);
+            this.toolStrip1.BackColor = System.Drawing.SystemColors.Control;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator2,
+            this.toolStripLabel1,
+            this.comboStudStyle,
+            this.toolStripSeparator1,
+            this.toolStripLabel2,
+            this.comboMaterialStyle,
+            this.toolStripSeparator3,
+            this.toolStripLabel3});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(958, 25);
+            this.toolStrip1.TabIndex = 8;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(62, 22);
+            this.toolStripLabel1.Text = "Stud Style:";
+            // 
+            // comboStudStyle
+            // 
+            this.comboStudStyle.BackColor = System.Drawing.SystemColors.Window;
+            this.comboStudStyle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboStudStyle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboStudStyle.Items.AddRange(new object[] {
+            "Circle Rs (2006 - 2009)",
+            "Rounded Squares (Early 2009)",
+            "Rounded Rs (2009 - 2013)",
+            "Rounded Rs w/Universal (Early 2013)",
+            "Rounded Rs Old Logo (2013 - 2017)",
+            "Rounded Rs New Logo (March 2017)",
+            "Rounded Squares (March 2017)"});
+            this.comboStudStyle.Name = "comboStudStyle";
+            this.comboStudStyle.Size = new System.Drawing.Size(225, 25);
+            this.comboStudStyle.SelectedIndexChanged += new System.EventHandler(this.comboMaterialStyle_SelectedIndexChanged);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(81, 22);
+            this.toolStripLabel2.Text = "Material Style:";
+            // 
+            // comboMaterialStyle
+            // 
+            this.comboMaterialStyle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboMaterialStyle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboMaterialStyle.Items.AddRange(new object[] {
+            "Non-Functional"});
+            this.comboMaterialStyle.Name = "comboMaterialStyle";
+            this.comboMaterialStyle.Size = new System.Drawing.Size(225, 25);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripLabel3
+            // 
+            this.toolStripLabel3.IsLink = true;
+            this.toolStripLabel3.Name = "toolStripLabel3";
+            this.toolStripLabel3.Size = new System.Drawing.Size(74, 22);
+            this.toolStripLabel3.Text = "GitHub Page";
+            this.toolStripLabel3.Click += new System.EventHandler(this.toolStripLabel3_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1019, 568);
+            this.ClientSize = new System.Drawing.Size(958, 465);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -1141,6 +1243,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxMaterial)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxStudsSmooth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxStudsGlue)).EndInit();
@@ -1150,7 +1253,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericStudsIntensity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericStudsTransparency)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxStudsColour)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1233,6 +1339,16 @@
         private System.Windows.Forms.Button buttonStudsExportSelectedPNG;
         private System.Windows.Forms.Button buttonStudsExportSelected;
         private System.Windows.Forms.CheckBox checkVMTCategory;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripComboBox comboStudStyle;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripComboBox comboMaterialStyle;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
     }
 }
 

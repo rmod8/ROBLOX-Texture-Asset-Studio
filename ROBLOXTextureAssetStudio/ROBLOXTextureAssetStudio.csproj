@@ -8,7 +8,7 @@
     <ProjectGuid>{80C47D0D-A832-400B-B5F4-54B027B962AC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>ROBLOXTextureAssetStudio</RootNamespace>
-    <AssemblyName>ROBLOX Texture Asset Studio 1.4</AssemblyName>
+    <AssemblyName>ROBLOX Texture Asset Studio 1.5</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -278,6 +278,30 @@
     <None Include="Sounds\Bass.wav" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="StudTemplateImages\e2017\e2017_universal.png" />
+    <None Include="StudTemplateImages\e2017\e2017_studs.png" />
+    <None Include="StudTemplateImages\e2017\e2017_inlets.png" />
+    <None Include="StudTemplateImages\e2017\e2017_glue.png" />
+    <None Include="StudTemplateImages\2013\2013_universal.png" />
+    <None Include="StudTemplateImages\2013\2013_studs.png" />
+    <None Include="StudTemplateImages\2013\2013_inlets.png" />
+    <None Include="StudTemplateImages\2013\2013_glue.png" />
+    <None Include="StudTemplateImages\e2013\e2013_universal.png" />
+    <None Include="StudTemplateImages\e2013\e2013_studs.png" />
+    <None Include="StudTemplateImages\e2013\e2013_inlets.png" />
+    <None Include="StudTemplateImages\e2013\e2013_glue.png" />
+    <None Include="StudTemplateImages\2009\2009_universal.png" />
+    <None Include="StudTemplateImages\2009\2009_studs.png" />
+    <None Include="StudTemplateImages\2009\2009_inlets.png" />
+    <None Include="StudTemplateImages\2009\2009_glue.png" />
+    <None Include="StudTemplateImages\e2009\e2009_universal.png" />
+    <None Include="StudTemplateImages\e2009\e2009_studs.png" />
+    <None Include="StudTemplateImages\e2009\e2009_inlets.png" />
+    <None Include="StudTemplateImages\e2009\e2009_glue.png" />
+    <None Include="StudTemplateImages\2006\2006_universal.png" />
+    <None Include="StudTemplateImages\2006\2006_studs.png" />
+    <None Include="StudTemplateImages\2006\2006_inlets.png" />
+    <None Include="StudTemplateImages\2006\2006_glue.png" />
     <None Include="ErrorTexture.png" />
     <Content Include="icons8-toolbox-512.ico" />
     <None Include="Sounds\Ping.wav" />
@@ -319,6 +343,10 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.3.3.4\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.3.3.4\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.6.5.5\build\Fody.targets" Condition="Exists('..\packages\Fody.6.5.5\build\Fody.targets')" />

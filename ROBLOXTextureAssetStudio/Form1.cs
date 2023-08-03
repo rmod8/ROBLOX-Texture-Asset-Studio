@@ -20,6 +20,10 @@ namespace ROBLOXTextureAssetStudio
         static Image[] studsRef;
         static bool[] studsChecked;
 
+        static Bitmap templateOutlets = Properties.Resources.studs;
+        static Bitmap templateInlets = Properties.Resources.inlets;
+        static Bitmap templateUniversal = Properties.Resources.universal;
+        static Bitmap templateGlue = Properties.Resources.glue;
 
         //Audio setup, this is probably what you're not looking for
         SoundPlayer soundDecalDownload = new SoundPlayer(Properties.Resources.DecalDownload);
@@ -132,6 +136,8 @@ namespace ROBLOXTextureAssetStudio
             pictureboxStudsColour.BackColor = Properties.Settings.Default.StudsColour;
             numericStudsIntensity.Value = Properties.Settings.Default.StudsIntensity;
             checkVMTCategory.Checked = Properties.Settings.Default.ExportCategory;
+            comboStudStyle.SelectedIndex = Properties.Settings.Default.StudsStyle;
+            comboMaterialStyle.SelectedIndex = Properties.Settings.Default.MaterialsStyle;
 
             if (Properties.Settings.Default.PromptPositionReset)
             {
@@ -161,7 +167,7 @@ namespace ROBLOXTextureAssetStudio
             pictureboxStudsSmooth.Image = new Bitmap(2,2);
             pictureboxStudsGlue.Image = (Image)Properties.Resources.glue.Clone();
 
-
+            ReplaceBaseImages();
 
 
 
@@ -1215,11 +1221,11 @@ namespace ROBLOXTextureAssetStudio
         {
             if (Imprint == null)
             {
-                Bitmap Bmp = new Bitmap(128, 128);
+                Bitmap Bmp = new Bitmap(pictureboxStudsOutlets.Width, pictureboxStudsOutlets.Height);
                 using (Graphics gfx = Graphics.FromImage(Bmp))
                 using (SolidBrush brush = new SolidBrush(Color.FromArgb(255, color.R, color.G, color.B)))
                 {
-                    gfx.FillRectangle(brush, 0, 0, 128, 128);
+                    gfx.FillRectangle(brush, 0, 0, pictureboxStudsOutlets.Width, pictureboxStudsOutlets.Height);
                 }
                 return Bmp;
             }
@@ -1328,11 +1334,11 @@ namespace ROBLOXTextureAssetStudio
         {
             this.Enabled = false;
 
-            pictureboxStudsOutlets.Image = GenerateStuds(Properties.Resources.studs, pictureboxStudsColour.BackColor, (float)numericStudsIntensity.Value);
-            pictureboxStudsInlets.Image = GenerateStuds(Properties.Resources.inlets, pictureboxStudsColour.BackColor, (float)numericStudsIntensity.Value);
-            pictureboxStudsUniversal.Image = GenerateStuds(Properties.Resources.universal, pictureboxStudsColour.BackColor, (float)numericStudsIntensity.Value);
+            pictureboxStudsOutlets.Image = GenerateStuds(templateOutlets, pictureboxStudsColour.BackColor, (float)numericStudsIntensity.Value);
+            pictureboxStudsInlets.Image = GenerateStuds(templateInlets, pictureboxStudsColour.BackColor, (float)numericStudsIntensity.Value);
+            pictureboxStudsUniversal.Image = GenerateStuds(templateUniversal, pictureboxStudsColour.BackColor, (float)numericStudsIntensity.Value);
             pictureboxStudsSmooth.Image = GenerateStuds(null, pictureboxStudsColour.BackColor, (float)numericStudsIntensity.Value);
-            pictureboxStudsGlue.Image = GenerateStuds(Properties.Resources.glue, pictureboxStudsColour.BackColor, (float)numericStudsIntensity.Value);
+            pictureboxStudsGlue.Image = GenerateStuds(templateGlue, pictureboxStudsColour.BackColor, (float)numericStudsIntensity.Value);
             soundStudImprint.Play();
             if (!allowExportStuds)
             {
@@ -1567,6 +1573,85 @@ namespace ROBLOXTextureAssetStudio
             }
             this.Enabled = true;
         }
+
+        private void toolStripLabel3_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/rmod8/ROBLOX-Texture-Asset-Studio");
+        }
+
+        private void comboStudStyle_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.StudsStyle = comboStudStyle.SelectedIndex;
+            Properties.Settings.Default.Save();
+            ReplaceBaseImages();
+        }
+
+        private void comboMaterialStyle_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.MaterialsStyle = comboMaterialStyle.SelectedIndex;
+            Properties.Settings.Default.Save();
+        }
+
+        private void ReplaceBaseImages()
+        {
+            switch (comboStudStyle.SelectedIndex)
+            {
+                case 6:
+                    pictureboxStudsOutlets.Image = (Image)Properties.Resources.studs;
+                    pictureboxStudsInlets.Image = (Image)Properties.Resources.inlets;
+                    pictureboxStudsUniversal.Image = (Image)Properties.Resources.universal;
+                    pictureboxStudsGlue.Image = (Image)Properties.Resources.glue;
+                    break;
+
+                case 5:
+                    pictureboxStudsOutlets.Image = (Image)Properties.Resources.e2017_studs;
+                    pictureboxStudsInlets.Image = (Image)Properties.Resources.e2017_inlets;
+                    pictureboxStudsUniversal.Image = (Image)Properties.Resources.e2017_universal;
+                    pictureboxStudsGlue.Image = (Image)Properties.Resources.e2017_glue;
+                    break;
+
+                case 4:
+                    pictureboxStudsOutlets.Image = (Image)Properties.Resources._2013_studs;
+                    pictureboxStudsInlets.Image = (Image)Properties.Resources._2013_inlets;
+                    pictureboxStudsUniversal.Image = (Image)Properties.Resources._2013_universal;
+                    pictureboxStudsGlue.Image = (Image)Properties.Resources._2013_glue;
+                    break;
+
+                case 3:
+                    pictureboxStudsOutlets.Image = (Image)Properties.Resources.e2013_studs;
+                    pictureboxStudsInlets.Image = (Image)Properties.Resources.e2013_inlets;
+                    pictureboxStudsUniversal.Image = (Image)Properties.Resources.e2013_universal;
+                    pictureboxStudsGlue.Image = (Image)Properties.Resources.e2013_glue;
+                    break;
+
+                case 2:
+                    pictureboxStudsOutlets.Image = (Image)Properties.Resources._2009_studs;
+                    pictureboxStudsInlets.Image = (Image)Properties.Resources._2009_inlets;
+                    pictureboxStudsUniversal.Image = (Image)Properties.Resources._2009_universal;
+                    pictureboxStudsGlue.Image = (Image)Properties.Resources._2009_glue;
+                    break;
+
+                case 1:
+                    pictureboxStudsOutlets.Image = (Image)Properties.Resources.e2009_studs;
+                    pictureboxStudsInlets.Image = (Image)Properties.Resources.e2009_inlets;
+                    pictureboxStudsUniversal.Image = (Image)Properties.Resources.e2009_universal;
+                    pictureboxStudsGlue.Image = (Image)Properties.Resources.e2009_glue;
+                    break;
+
+                case 0:
+                    pictureboxStudsOutlets.Image = (Image)Properties.Resources._2006_studs;
+                    pictureboxStudsInlets.Image = (Image)Properties.Resources._2006_inlets;
+                    pictureboxStudsUniversal.Image = (Image)Properties.Resources._2006_universal;
+                    pictureboxStudsGlue.Image = (Image)Properties.Resources._2006_glue;     
+                    break;
+            }
+            templateOutlets = (Bitmap)pictureboxStudsOutlets.Image;
+            templateInlets = (Bitmap)pictureboxStudsInlets.Image;
+            templateUniversal = (Bitmap)pictureboxStudsUniversal.Image;
+            templateGlue = (Bitmap)pictureboxStudsGlue.Image;
+        }
+
+   
     }
 
     //API Classes

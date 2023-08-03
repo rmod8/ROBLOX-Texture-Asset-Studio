@@ -145,6 +145,42 @@
   <data name="diamondplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\TemplateImages\diamondplate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="e2009_glue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\StudTemplateImages\e2009\e2009_glue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="e2009_inlets" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\StudTemplateImages\e2009\e2009_inlets.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="e2009_studs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\StudTemplateImages\e2009\e2009_studs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="e2009_universal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\StudTemplateImages\e2009\e2009_universal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="e2013_glue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\StudTemplateImages\e2013\e2013_glue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="e2013_inlets" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\StudTemplateImages\e2013\e2013_inlets.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="e2013_studs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\StudTemplateImages\e2013\e2013_studs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="e2013_universal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\StudTemplateImages\e2013\e2013_universal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="e2017_glue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\StudTemplateImages\e2017\e2017_glue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="e2017_inlets" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\StudTemplateImages\e2017\e2017_inlets.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="e2017_studs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\StudTemplateImages\e2017\e2017_studs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="e2017_universal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\StudTemplateImages\e2017\e2017_universal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ErrorTexture" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\ErrorTexture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -222,5 +258,41 @@
   </data>
   <data name="woodplanks" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\TemplateImages\woodplanks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2006_glue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\StudTemplateImages\2006\2006_glue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2006_inlets" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\StudTemplateImages\2006\2006_inlets.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2006_studs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\StudTemplateImages\2006\2006_studs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2006_universal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\StudTemplateImages\2006\2006_universal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2009_glue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\StudTemplateImages\2009\2009_glue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2009_inlets" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\StudTemplateImages\2009\2009_inlets.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2009_studs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\StudTemplateImages\2009\2009_studs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2009_universal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\StudTemplateImages\2009\2009_universal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2013_glue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\StudTemplateImages\2013\2013_glue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2013_inlets" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\StudTemplateImages\2013\2013_inlets.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2013_studs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\StudTemplateImages\2013\2013_studs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2013_universal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\StudTemplateImages\2013\2013_universal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
