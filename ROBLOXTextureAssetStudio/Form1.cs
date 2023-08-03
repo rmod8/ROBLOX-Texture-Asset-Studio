@@ -1221,11 +1221,11 @@ namespace ROBLOXTextureAssetStudio
         {
             if (Imprint == null)
             {
-                Bitmap Bmp = new Bitmap(pictureboxStudsOutlets.Width, pictureboxStudsOutlets.Height);
+                Bitmap Bmp = new Bitmap(templateOutlets.Width, templateOutlets.Height);
                 using (Graphics gfx = Graphics.FromImage(Bmp))
                 using (SolidBrush brush = new SolidBrush(Color.FromArgb(255, color.R, color.G, color.B)))
                 {
-                    gfx.FillRectangle(brush, 0, 0, pictureboxStudsOutlets.Width, pictureboxStudsOutlets.Height);
+                    gfx.FillRectangle(brush, 0, 0, templateOutlets.Width, templateOutlets.Height);
                 }
                 return Bmp;
             }
